@@ -2,7 +2,7 @@
  import './style.css';
 import { Component } from 'react';
 import { render } from 'react-dom';
-
+import link from "react-dom"
 
 
 export const SignUp: React.FC= () => {
@@ -64,55 +64,5 @@ export const SignUp: React.FC= () => {
         
     );
 };
-
-
-// 
-// export default class App extends Component{
-
-// constructor(props:IEntry){
-
-// super(props);
-
-// this.state={ first_name="", last_name:"", email_id="", password="" }
-
-// }
-
-// handleChange = (event:any) =>{
-
-// this.setState({ [event.target.name]:event.target.value })
-
-// }
-
-// handleSubmit = (event:any) =>{
-
-// event.preventDefault();
-
-
-// const data = { first_name:"yashh", last_name="gaur", email_id:"yash@gmail.com", password="qwere2112"}
-
-// fetch("http://127.0.0.1:5000/users/signup", { 
-// method: 'POST',
-// body: JSON.stringify(data), 
-
-// headers:{ 'Content-Type': 'application/json' } })
-
-// .then(res => res.json())
-//  }
-
-// render(){
-
-// return(
-
-// <form onSubmit={this.handleSubmit}>
-
-// <input type="text" name="first_name" onChange={this.handleChange} />
-// <input type="text" name="last_name" onChange={this.handleChange} />
-// <input type="text" name="email_id" onChange={this.handleChange} />
-// <input type="password" name="password" onChange={this.handleChange} />
-// <input type="submit" value="SignUp" /> </form> )
-
-// }
-
-// }
 
 

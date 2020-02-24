@@ -3,6 +3,7 @@
 import { Component } from 'react';
 import { render } from 'react-dom';
 import link from "react-dom"
+import { Link } from 'react-router-dom';
 
 
 export const SignUp: React.FC= () => {
@@ -26,8 +27,6 @@ export const SignUp: React.FC= () => {
     };
 
     
-
-//  document.getElementById('postdata').addEventListener('submit', postdata); 
 
  const postdata = (event: any)=>{
             event.preventDefault();
@@ -54,10 +53,10 @@ export const SignUp: React.FC= () => {
                     <div><input type="text" placeholder= "last-name" value={lastname} onChange={onLastNameChange}name="lastname" id="second"/><br></br></div>
                     <div><input type="text" placeholder= "EmailId" value={emailId} onChange={onEmailIdChange} name="email" id="email"/><br></br></div>
                     <div><input type="password" placeholder= "password" value={password} onChange={onPasswordChange}name="password" id="pass"/><br></br></div>
-                    <div><input type="submit" className="button-class" value="SEND POST" /></div>
+    <div><input type="submit" className="button-class" value="SIGN UP"  /></div>
             <div className="login-redirect">
                     <p>Already have an account</p>
-                    <p><a href="login">LOGIN</a></p>
+                    <p><Link to="/login">Login</Link></p>
             </div>
             </div>
         </form>

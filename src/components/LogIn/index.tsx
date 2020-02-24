@@ -34,7 +34,7 @@ export const LogIn: React.FC = () => {
             <div className="container">
                     <div><input type="text" placeholder= "EmailId" value={emailId} onChange={onEmailIdChange}  name="email" id="email"/><br></br></div>
                     <div><input type="password" placeholder= "password" value={password} onChange={onPasswordChange}name="password" id="password"/><br></br></div>
-                    <div><input type="submit" className="button-class" value="SEND POST" /></div>
+                    <div><input type="submit" className="button-class" value="LogIn" /></div>
                     <div><p><a href="forgot password">forgot password</a></p></div>
             </div>
         </form>

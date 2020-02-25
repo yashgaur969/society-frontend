@@ -1,8 +1,6 @@
  import * as React from 'react';
  import './style.css';
 import { Component } from 'react';
-import { render } from 'react-dom';
-import link from "react-dom"
 import { Link } from 'react-router-dom';
 
 

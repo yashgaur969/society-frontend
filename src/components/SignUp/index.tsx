@@ -41,19 +41,23 @@ export const SignUp: React.FC= () => {
              }).then(res => res.json())
              .catch(error => console.error('Error:', error))
              .then(response => console.log('Success:', response)); 
+
+             
              
         }
 
 
     return (
         
-        <form onSubmit={postdata}>
+        <form onSubmit={postdata} >
+            <div> <h1><strong>Society Hub</strong></h1></div>
             <div className="container">
+            <h1><strong>Sign Up Page</strong></h1>
                 <div><input type="text" placeholder="first-name" value={firstname} onChange={onFirstNameChange} name="firstname" id="first" /><br></br></div>
                 <div><input type="text" placeholder="last-name" value={lastname} onChange={onLastNameChange} name="lastname" id="second" /><br></br></div>
                 <div><input type="text" placeholder="EmailId" value={emailId} onChange={onEmailIdChange} name="email" id="email" /><br></br></div>
                 <div><input type="password" placeholder="password" value={password} onChange={onPasswordChange} name="password" id="pass" /><br></br></div>
-                <div><input type="submit" className="button-class" value="SIGN UP"/> </div>
+                <div><button type="submit" className="button-class" value="SIGN UP" ><Link to="/login">SignUp</Link></button></div>
                 <div className="login-redirect">
                     <p>Already have an account ? <Link to="/login">Login</Link></p>
                 </div>

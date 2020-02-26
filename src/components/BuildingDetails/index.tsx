@@ -2,7 +2,7 @@ import * as React from 'react';
 import './style.css';
 
 
-export const BuildingDetails: React.FC= () => {
+export const BuildingDetails: React.FC= (props: any) => {
 
     const [Floor, setFloor] = React.useState('');
     const [Flat, setFlat] = React.useState('');
@@ -33,7 +33,7 @@ export const BuildingDetails: React.FC= () => {
             method: 'POST',
             body:JSON.stringify(data),
             headers : { 'Content-Type': 'application/json' } 
-         }).then(res => res.json())
+         }).then(res => console.log(res))
          .catch(error => console.error('Error:', error))
          .then(response => console.log('Success:', response)); 
 

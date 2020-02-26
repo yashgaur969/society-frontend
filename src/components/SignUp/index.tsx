@@ -38,7 +38,7 @@ export const SignUp: React.FC= () => {
                 method: 'POST',
                 body:JSON.stringify(data),
                 headers : { 'Content-Type': 'application/json' } 
-             }).then(res => res.json())
+             }).then(res => console.log(res))
              .catch(error => console.error('Error:', error))
              .then(response => console.log('Success:', response)); 
 
@@ -57,7 +57,7 @@ export const SignUp: React.FC= () => {
                 <div><input type="text" placeholder="last-name" value={lastname} onChange={onLastNameChange} name="lastname" id="second" /><br></br></div>
                 <div><input type="text" placeholder="EmailId" value={emailId} onChange={onEmailIdChange} name="email" id="email" /><br></br></div>
                 <div><input type="password" placeholder="password" value={password} onChange={onPasswordChange} name="password" id="pass" /><br></br></div>
-                <div><button type="submit" className="button-class" value="SIGN UP" ><Link to="/login">SignUp</Link></button></div>
+                <div><input type="submit" className="button-class" value="Next" /></div>
                 <div className="login-redirect">
                     <p>Already have an account ? <Link to="/login">Login</Link></p>
                 </div>

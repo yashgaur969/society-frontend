@@ -3,6 +3,7 @@ import * as React from 'react';
  import { societyTypes, isGuarded, isFenced } from '../../Constants/constant';
 import { Link } from 'react-router-dom';
 import { BuildingDetails } from '../BuildingDetails';
+import { ApartmentDetails } from '../ApartmentDetails';
 
  
  export const SocietyDetails: React.FC= () => {
@@ -21,6 +22,12 @@ import { BuildingDetails } from '../BuildingDetails';
         setGuarded(event.target.value);
     };
 
+    // const nextPage = () =>{
+    //     let typeOfSociety = Society;
+    //     if(typeOfSociety === 'Building')
+    //     return <BuildingDetails />
+    //     else return <ApartmentDetails />
+    // }
 
     const postSocietyData = (event: any)=>{
         event.preventDefault();
@@ -33,7 +40,7 @@ import { BuildingDetails } from '../BuildingDetails';
             method: 'POST',
             body:JSON.stringify(data),
             headers : { 'Content-Type': 'application/json' } 
-         }).then(res => res.json())
+         }).then(res => console.log(res))
          .catch(error => console.error('Error:', error))
          .then(response => console.log('Success:', response)); 
 
@@ -75,7 +82,7 @@ import { BuildingDetails } from '../BuildingDetails';
                     ))}
                 </select>
             </label><br></br><br></br>
-            <div><button type="submit" className="button-class" value="NEXT"><Link to="/buildingDetails">NEXT</Link></button></div>
+            <div><input type="submit" className="button-class" value="Next"/></div>
         </div>
         </form>
         );

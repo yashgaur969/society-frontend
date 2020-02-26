@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 // import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
-// import {SignUp} from './components/SignUp'
-// import {LogIn} from './components/LogIn'
 import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

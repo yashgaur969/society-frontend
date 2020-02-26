@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 export const LogIn: React.FC = () => {
 
@@ -35,7 +36,7 @@ export const LogIn: React.FC = () => {
             <div className="container">
                     <div><input type="text" placeholder= "EmailId" value={emailId} onChange={onEmailIdChange}  name="email" id="email"/><br></br></div>
                     <div><input type="password" placeholder= "password" value={password} onChange={onPasswordChange}name="password" id="password"/><br></br></div>
-                    <div><input type="submit" className="button-class" value="LogIn" /></div>
+                    <div><input type="submit" className="button-class" value="Next" /></div>
                     <div><p><a href="forgot password">forgot password</a></p></div>
             </div>
         </form>

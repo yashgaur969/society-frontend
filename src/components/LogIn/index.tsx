@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import Dashboard from '../Dashboard';
+
 
 export const LogIn: React.FC = () => {
 
@@ -41,4 +43,6 @@ export const LogIn: React.FC = () => {
             </div>
         </form>
     )
+    // 
+    // <button type="submit" className="button-class" value="next"><Link to="/dashboard">Login</Link
 }

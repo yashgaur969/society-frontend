@@ -47,12 +47,21 @@ import { ApartmentDetails } from '../ApartmentDetails';
          
         }
 
+    // const onAddAction = (event: any) =>{
+    //     let society_selected = Society
+    //     if(society_selected==='Building'){
+
+    //     }
+        // <BuildingDetails />
+        // if(society_selected==='Apartment')
+        // <ApartmentDetails />
+    
     return (
         <form onSubmit={postSocietyData} className="main-container">
             <h1><strong>Society Details</strong></h1>
         <div className="society-details">
             <label className="society-input">
-                Task Type
+                Society Type
                         <select className="society-select" onChange={onSocietyChange} value={Society}>
                     {societyTypes.map((task: string) => (
                         <option key={task} value={task}>
@@ -84,10 +93,11 @@ import { ApartmentDetails } from '../ApartmentDetails';
             </label><br></br><br></br>
             <div><input type="submit" className="button-class" value="Next"/></div>
         </div>
+        <div>{
+            Society  === "Apartment" ? <ApartmentDetails /> : <BuildingDetails />
+        }</div>
+        
+        
         </form>
         );
-
-
-
-
- };
+};

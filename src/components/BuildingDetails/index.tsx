@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './style.css';
+import { ManagementDetails } from '../ManagementDetails';
 
 
 export const BuildingDetails: React.FC= (props: any) => {
@@ -50,6 +51,11 @@ export const BuildingDetails: React.FC= (props: any) => {
                 <div><label>total No.of flats<input type='text' value={Total}/></label></div>
                 <hr/>
                 <input type="submit" className="button-class" value="Next" onClick={onAddAction}/>
+            </div>
+            <div>
+                {
+                        <ManagementDetails />
+                }
             </div>
         </form>
     );

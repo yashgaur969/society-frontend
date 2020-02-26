@@ -57,7 +57,7 @@ export const SignUp: React.FC= () => {
                 <div><input type="text" placeholder="last-name" value={lastname} onChange={onLastNameChange} name="lastname" id="second" /><br></br></div>
                 <div><input type="text" placeholder="EmailId" value={emailId} onChange={onEmailIdChange} name="email" id="email" /><br></br></div>
                 <div><input type="password" placeholder="password" value={password} onChange={onPasswordChange} name="password" id="pass" /><br></br></div>
-                <div><input type="submit" className="button-class" value="Next" /></div>
+                <div><button type="submit" value="Submit">SignUp</button></div>
                 <div className="login-redirect">
                     <p>Already have an account ? <Link to="/login">Login</Link></p>
                 </div>
@@ -66,5 +66,5 @@ export const SignUp: React.FC= () => {
         
     );
 };
-
+{/* <input type="submit" className="button-class" value="Next" /> */}
 

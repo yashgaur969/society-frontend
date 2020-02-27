@@ -57,9 +57,9 @@ export const ApartmentDetails: React.FC= (props: any) => {
                 <label>number of wings<input type="number" name="Wings" value={Wing} onChange={onWingChange}/></label><br></br><br></br>
                <label>number of floors<input type="number" name="floors" value={Floor} onChange={onFloorChange}/></label><br></br><br></br>
                 <label>number of flats<input type="number" name="flats" value={Flat} onChange={onFlatChange}/></label><br></br><br></br>
-                <hr/>
+                <hr className="line"/>
                 <div><label>total No.of flats<input type='text' value={Total}/></label></div>
-                <hr/>
+                <hr className="line"/>
                 <input type="submit" className="button-class" value="Next" onClick={onAddAction}/>
             </div>
             <div>

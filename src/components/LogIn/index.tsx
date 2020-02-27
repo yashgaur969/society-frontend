@@ -38,11 +38,12 @@ export const LogIn: React.FC = () => {
             <div className="container">
                     <div><input type="text" placeholder= "EmailId" value={emailId} onChange={onEmailIdChange}  name="email" id="email"/><br></br></div>
                     <div><input type="password" placeholder= "password" value={password} onChange={onPasswordChange}name="password" id="password"/><br></br></div>
-                    <div><input type="submit" className="button-class" value="Next" /></div>
+                    <div><button type="submit" className="button-class" value="next"><Link to="/dashboard">Login</Link></button></div>
                     <div><p><a href="forgot password">forgot password</a></p></div>
             </div>
         </form>
     )
     // 
-    // <button type="submit" className="button-class" value="next"><Link to="/dashboard">Login</Link
+    // <button type="submit" className="button-class" value="next"><Link to="/dashboard">Login</Link></button>
 }
+{/* <input type="submit" className="button-class" value="Next" /> */}

@@ -47,18 +47,11 @@ import { ApartmentDetails } from '../ApartmentDetails';
          
         }
 
-    // const onAddAction = (event: any) =>{
-    //     let society_selected = Society
-    //     if(society_selected==='Building'){
-
-    //     }
-        // <BuildingDetails />
-        // if(society_selected==='Apartment')
-        // <ApartmentDetails />
-    
     return (
+        
         <form onSubmit={postSocietyData} className="main-container">
-            <h1><strong>Society Details</strong></h1>
+            <div><button type="submit" className="button-class-two" value="next"><Link to="/login">logout</Link></button>
+            <h1><strong>Society Details</strong></h1></div>
         <div className="society-details">
             <label className="society-input">
                 Society Type

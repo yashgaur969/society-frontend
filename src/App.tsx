@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard';
 
 
 
+
 const App = () =>{
   
   return (
@@ -19,10 +20,7 @@ const App = () =>{
        <Route exact={true} path="/" component={SignUp} />
        <Route exact={true} path="/login" component={LogIn} />
        <Route exact={true} path="/societyDetails" component={SocietyDetails} />
-       {/* <Route exact={true} path="/buildingDetails" component={BuildingDetails} /> */}
-       {/* <Route exact={true} path="/apartmentDetails" component={ApartmentDetails} /> */}
-       {/* <Route exact={true} path="/managementDetails" component={ManagementDetails} /> */}
-       /* <Route exact={true} path="/dashboard" component={Dashboard} /> */}
+       <Route exact={true} path="/dashboard" component={Dashboard} /> 
      </switch>
      </BrowserRouter>
     // <Dashboard />

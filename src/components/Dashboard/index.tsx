@@ -4,25 +4,6 @@ import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 
-// export const Dashboard: React.FC = () =>{
-//     return (
-//         <div><button className="add-society"><Link to="/societyDetails">Add Society</Link></button></div>
-//     )
-// }
-// export const Dashboard: React.FC= () =>{
-//     const [societyData, setSocietyData] = React.useState([])
-//     React.useEffect(()=>{
-//         fetch("http://127.0.0.1:5000/societyDetails").then(response => 
-//         response.json().then(data =>{
-//             setSocietyData(data.societyData)        
-//         }))
-
-//     },[])
-
-//     return (
-//         <div><button className="add-society"><Link to="/societyDetails">Add Society</Link></button></div>
-//     )
-// }
 
 export default class Dashboard extends React.Component{
     state = {
@@ -32,7 +13,7 @@ export default class Dashboard extends React.Component{
         axios.get("http://127.0.0.1:5000/societyDetails")
         .then(res => {
             const societyData = res.data;
-            console.log(societyData)
+            // console.log(societyData)
             this.setState({societyData:societyData.data});
         });
     }
@@ -42,11 +23,17 @@ export default class Dashboard extends React.Component{
         console.log(this.state.societyData)
         
         return (
-            
+            <div>
+     <button type="submit" className="button-class" value="next"><Link to="/societyDetails">Add Society</Link></button>
+     <button type="submit" className="button-class" value="next"><Link to="/login">logout</Link></button>
+     
+
             <ul>
-                {this.state.societyData.map((s:any) => <div><h1><strong>{s.society_type}</strong></h1><br></br>{s.is_fenced} {s.is_guarded}<br></br><br></br></div>)}
+                {this.state.societyData.map((s:any) => <div><hr/><h1><strong>Society: {s.society_type}</strong>
+                            </h1><br></br><strong>Fenced?:</strong> {s.is_fenced}<br></br> 
+                            <strong>Guarded? :</strong>{s.is_guarded}<br></br><br></br><hr/></div>)}
             </ul>
-            
+            </div>
     
         )
     }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 
 export const ManagementDetails: React.FC= () => {
@@ -39,12 +40,12 @@ export const ManagementDetails: React.FC= () => {
 
     return (
         <form onSubmit={postManagementdata} >
-            <div className="container">
+            <div className="main-container">
             <h1><strong>Management Details</strong></h1>
                 <div><input type="text" placeholder="name" value={managername} onChange={onManagerNameChange} name="name" id="first" /><br></br></div>
                 <div><input type="number" placeholder="number" value={contact} onChange={onContactChange} name="contact" id="second" /><br></br></div>
                 <div><input type="text" placeholder="EmailId" value={emailId} onChange={onEmailIdChange} name="email" id="email" /><br></br></div>
-                <div><button type="submit" value="Submit">Create Structure</button></div>
+                <div><button type="submit" className="button-class" value="next"><Link to="/dashboard">Create Structure</Link></button></div>
                 
             </div>
         </form>
